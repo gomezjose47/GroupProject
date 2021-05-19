@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows:1fr 15fr 1fr;
   height: 100%;
-  background-color: #303031;
+  background-color:FFFF;
 }
 
 .gallery {
@@ -11,5 +11,5 @@
   margin: 0 auto;
   padding: 0 50px;
   min-height: calc(100% - 130px);
-  background-color:#303031;
+  background-color:FFFF;
 }
