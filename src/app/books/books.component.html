@@ -1,15 +1,93 @@
 <div class="books-container">
   <mat-toolbar color="primary" class="create-toolbar">
     <mat-toolbar-row>
-      <span class="title">All Books</span>
+      <span class="title">Books</span>
       <div class="button-row">
         <button (click)="goToCreate()" mat-raised-button color="accent" class="pull-right">
-          Create a Book
+          Add a book
           <mat-icon class="example-icon">add_circle</mat-icon>
         </button>
+        <div class="sign-in">Please Log in to View Your Wishlist or Continue Reading</div>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
+  <div class="layout">
+    <hr>
+    <div>
+      <h1> Please consider reading one of our books from our curated list:</h1>
+
+      <div class="recommended">
+        This Months's most popular titles:
+        <ul>
+          <li>The Vanishing Half (2020) By Brit Bennett</li>
+        </ul>
+        <ul>
+          <li>Shuggie Bain (2020) By Douglass Stuart</li>
+        </ul>
+        <ul>
+          <li>The Mirror and the light (2020) by Hilary Mantel</li>
+        </ul>
+        <ul>
+          <li>Homeland Elegies (2020) by Ayad Akhtar</li>
+        </ul>
+        <ul>
+          <li>Deacon King Kong (2020) by James McBride</li>
+        </ul>
+      </div>
+        <div class="banned">
+        <span class="Books-banned"> Books banned around the world: </span>
+          <ul>
+            <li>Sherman Alexie, The Absolutely True Diary of a Part-Time Indian (2007), banned in several U.S. States.
+            </li>
+          </ul>
+          <ul>
+            <li>Nuruddin Farah, From a Crooked Rib (1970, 2006), banned in Somalia</li>
+          </ul>
+          <ul>
+            <li>Taslima Nasrin, Shei Shab Andhakar (2004; All that darkness), banned in Bangladesh</li>
+          </ul>
+          <ul>
+            <li>To Kill a Mockingbird by Harper Lee (1960), banned in several U.S. States.</li>
+          </ul>
+          <ul>
+            <li>1984 by George Orwell (1949), banned in several U.S. States.</li>
+          </ul>
+        </div>
+        <div class="best">
+          <span>Best Books of All Time:</span>
+          <ul>
+            <li>The ClockWork Orange (1962) by Anthony Burgess</li>
+          </ul>
+          <ul>
+            <li>Animal Farm (1945) by George Orwell</li>
+          </ul>
+          <ul>
+            <li>The Catcher (1951) in the Rye by J.D. Salinger</li>
+          </ul>
+          <ul>
+            <li>The Great Gatsby (1925) by F. Scott Fitzgerald</li>
+          </ul>
+          <ul>
+            <li>Lord of the Flies (1954) by William Golding</li>
+          </ul>
+        </div>
+        <p class="lorem"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni maxime accusantium exercitationem ad
+          deleniti soluta laborum eligendi adipisci accusamus dignissimos qui corrupti, sint eius, tenetur optio.
+          Adipisci ea cupiditate dolorum.
+          Ipsam accusantium ullam cupiditate quas delectus voluptatem dolorum vel sed qui repellat officiis nulla
+          nostrum, perferendis, quidem sapiente earum nesciunt debitis repudiandae est blanditiis rerum corrupti. Quam
+          deserunt in animi.
+          Consequatur quaerat reprehenderit facilis tenetur iusto quis commodi nemo natus excepturi at? Reprehenderit
+          eum veniam laborum voluptates distinctio iste explicabo illo delectus facere nemo! Veritatis explicabo sequi
+          ipsa culpa accusantium?</p>
+       <p class="update">Updated March 27, 2020</p>
+         
+        <hr>
+
+      
+    </div>
+
+  </div>
   <div class="book-card-container">
     <mat-card class="grow item-card" *ngFor="let book of books; let i = index">
       <mat-toolbar color="warn" class="toolbar">
@@ -21,9 +99,9 @@
       <img class="list-cover-image" mat-card-image [src]="book.image_url" alt="book">
       <mat-card-content>
         <p>ID: {{book.id}}</p>
-        <P>Author: {{book.author}}</P>
-        <P>Genre: {{book.genre}}</P>
-        <P>Read: {{book.read}}</P>
+        <P>Make: {{book.author}}</P>
+        <P>Model: {{book.genre}}</P>
+        <P>In Stock: {{book.read}}</P>
       </mat-card-content>
       <mat-card-actions class="btn-action-grid">
         <button mat-raised-button (click)="deleteBook(book.id)" color="warn">
